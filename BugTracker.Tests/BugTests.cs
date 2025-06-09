@@ -65,8 +65,12 @@ namespace BugTracker.Tests
             });
         }
 
-        // TODO: Add test to verify default value of AssignedToDeveloper is null
-
-        // TODO: Add test to verify AssignedToDeveloper can be assigned and retrieved correctly
+        [Fact]
+        public void CanAddAttachmentUrl()
+        {
+            var bug = new Bug("Attachment Test", "Testing image URL property");
+            bug.AttachmentUrl = "http://example.com/image.png";
+            Assert.Equal("http://example.com/image.png", bug.AttachmentUrl);
+        }
     }
 }
