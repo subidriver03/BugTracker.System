@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.ConsoleUI", "BugTracker.ConsoleUI\BugTracker.ConsoleUI.csproj", "{AD8C403B-F4F1-4971-8BCD-879CC668DDBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Core", "BugTracker.Core\BugTracker.Core.csproj", "{EE7002BB-2293-4E7E-B3B1-A89B5B6526E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Tests", "BugTracker.Tests\BugTracker.Tests.csproj", "{459277A6-E389-45FB-B8CA-D8F3BC10A820}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		docs\architecture.md = docs\architecture.md
+		docs\bug-lifecycle-diagram.md = docs\bug-lifecycle-diagram.md
+		docs\moq-example.md = docs\moq-example.md
+		docs\tdd-walkthrough.md = docs\tdd-walkthrough.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
