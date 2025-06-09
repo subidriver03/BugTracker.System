@@ -1,6 +1,12 @@
-
 namespace BugTracker.Core
 {
+    public enum PriorityLevel
+    {
+        Low,
+        Medium,
+        High
+    }
+
     public class Bug
     {
         private static int _idSeed = 1;
@@ -10,6 +16,8 @@ namespace BugTracker.Core
         public BugStatus Status { get; private set; }
         public string AssignedToDeveloper { get; set; }  // New property
         public string? AttachmentUrl { get; set; }
+        public PriorityLevel Priority { get; set; } = PriorityLevel.Medium;
+
         public Bug(string title, string description)
         {
             if (string.IsNullOrWhiteSpace(title))
