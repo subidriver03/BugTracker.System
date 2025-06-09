@@ -72,5 +72,26 @@ namespace BugTracker.Tests
             bug.AttachmentUrl = "http://example.com/image.png";
             Assert.Equal("http://example.com/image.png", bug.AttachmentUrl);
         }
+
+        [Fact]
+[Fact]
+public void Bug_EstimatedFixTime_CanBeSetAndRetrieved()
+{
+    var bug = new Bug("Slow loading", "Page takes too long");
+    bug.EstimatedFixTimeHours = 5;
+    Assert.Equal(5, bug.EstimatedFixTimeHours);
+}
+
+[Fact]
+public void Bug_Priority_CanBeSetToHigh()
+{
+    var bug = new Bug("Critical Bug", "This bug breaks the app.");
+    bug.Priority = PriorityLevel.High;
+
+    Assert.Equal(PriorityLevel.High, bug.Priority);
+}
+
+        }
+
     }
 }
