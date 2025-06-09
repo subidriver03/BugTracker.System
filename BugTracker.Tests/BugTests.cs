@@ -74,12 +74,23 @@ namespace BugTracker.Tests
         }
 
         [Fact]
-        public void Bug_Priority_CanBeSetToHigh()
-        {
-            var bug = new Bug("Critical Bug", "This bug breaks the app.");
-            bug.Priority = PriorityLevel.High;
+[Fact]
+public void Bug_EstimatedFixTime_CanBeSetAndRetrieved()
+{
+    var bug = new Bug("Slow loading", "Page takes too long");
+    bug.EstimatedFixTimeHours = 5;
+    Assert.Equal(5, bug.EstimatedFixTimeHours);
+}
 
-            Assert.Equal(PriorityLevel.High, bug.Priority);
+[Fact]
+public void Bug_Priority_CanBeSetToHigh()
+{
+    var bug = new Bug("Critical Bug", "This bug breaks the app.");
+    bug.Priority = PriorityLevel.High;
+
+    Assert.Equal(PriorityLevel.High, bug.Priority);
+}
+
         }
 
     }
