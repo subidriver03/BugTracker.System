@@ -72,5 +72,14 @@ namespace BugTracker.Tests
             bug.AttachmentUrl = "http://example.com/image.png";
             Assert.Equal("http://example.com/image.png", bug.AttachmentUrl);
         }
+
+        [Fact]
+        public void Bug_EstimatedFixTime_CanBeSetAndRetrieved()
+        {
+            var bug = new Bug("Slow loading", "Page takes too long");
+            bug.EstimatedFixTimeHours = 5;
+            Assert.Equal(5, bug.EstimatedFixTimeHours);
+        }
+
     }
 }

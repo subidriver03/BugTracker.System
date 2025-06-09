@@ -1,15 +1,21 @@
-
 namespace BugTracker.Core
 {
     public class Bug
     {
         private static int _idSeed = 1;
+
         public int Id { get; }
         public string Title { get; }
         public string Description { get; set; }
         public BugStatus Status { get; private set; }
-        public string AssignedToDeveloper { get; set; }  // New property
+        public string AssignedToDeveloper { get; set; }
         public string? AttachmentUrl { get; set; }
+
+        /// <summary>
+        /// Estimated time in hours to fix the bug (optional).
+        /// </summary>
+        public int? EstimatedFixTimeHours { get; set; }
+
         public Bug(string title, string description)
         {
             if (string.IsNullOrWhiteSpace(title))
